@@ -58,23 +58,35 @@
     --radius-m: 8px;
     --radius-s: 4px;
 
-    /* Type Scale */
-    --dis-1: 100px;
-    --h1: 64px;
-    --h2: 48px;
-    --h4: 32px;
-    --h5: 24px;
-    --p1: 18px;
-    --cta: 16px;
-    --tag: 14px;
+    /* Type Scale (from Figma typography system) */
+    --dis-1: 100px;   /* Display 1 */
+    --dis-2: 64px;     /* Display 2 */
+    --h1: 48px;        /* Heading 1 */
+    --h2: 48px;        /* Heading 2 */
+    --h3: 40px;        /* Heading 3 */
+    --h4: 32px;        /* Heading 4 */
+    --h5: 24px;        /* Heading 5 */
+    --h6: 20px;        /* Heading 6 */
+    --p1: 18px;        /* Paragraph 1 */
+    --p2: 16px;        /* Paragraph 2 */
+    --p3: 14px;        /* Paragraph 3 */
+    --cta: 18px;       /* CTA */
+    --tag: 14px;       /* Tag */
 
-    /* Line Heights */
+    /* Line Heights (from Figma typography system) */
     --lh-dis-1: 104px;
-    --lh-h1: 72px;
+    --lh-dis-2: 72px;
+    --lh-h1: 60px;
     --lh-h2: 48px;
+    --lh-h3: 44px;
     --lh-h4: 36px;
     --lh-h5: 32px;
+    --lh-h6: 24px;
+    --lh-p1: 32px;
     --lh-p1-s: 22px;
+    --lh-p1-semi: 24px;
+    --lh-p2: 20px;
+    --lh-p3: 16px;
     --lh-cta: 18px;
     --lh-tag: 16px;
 
@@ -120,21 +132,33 @@
 
       /* Type Scale — 1.333x */
       --dis-1: 133px;
-      --h1: 85px;
+      --dis-2: 85px;
+      --h1: 64px;
       --h2: 64px;
+      --h3: 53px;
       --h4: 43px;
       --h5: 32px;
+      --h6: 27px;
       --p1: 24px;
-      --cta: 21px;
+      --p2: 21px;
+      --p3: 19px;
+      --cta: 24px;
       --tag: 19px;
 
       /* Line Heights — 1.333x */
       --lh-dis-1: 139px;
-      --lh-h1: 96px;
+      --lh-dis-2: 96px;
+      --lh-h1: 80px;
       --lh-h2: 64px;
+      --lh-h3: 59px;
       --lh-h4: 48px;
       --lh-h5: 43px;
+      --lh-h6: 32px;
+      --lh-p1: 43px;
       --lh-p1-s: 29px;
+      --lh-p1-semi: 32px;
+      --lh-p2: 27px;
+      --lh-p3: 21px;
       --lh-cta: 24px;
       --lh-tag: 21px;
     }
@@ -262,7 +286,7 @@
   }
   .hero h1 {
     font-size: var(--dis-1);
-    font-weight: 700;
+    font-weight: 300;
     line-height: var(--lh-dis-1);
     letter-spacing: 0;
     background: linear-gradient(140deg, #fff 38.6%, #b0c2e3 66.3%);
@@ -422,6 +446,7 @@
     font-size: var(--h5);
     font-weight: 400;
     line-height: var(--lh-h5);
+    /* Uses H5 style: 24px/32px per Figma design context */
     color: var(--grey-20);
     letter-spacing: 0;
   }
@@ -655,10 +680,11 @@
     flex-shrink: 0;
   }
   .industry-subtitle {
-    font-size: var(--tag);
-    line-height: 1.6;
-    color: #888;
-    margin-top: var(--pad-xl);
+    font-size: var(--h6);
+    line-height: var(--lh-h6);
+    color: var(--black);
+    font-weight: 400;
+    margin-top: var(--pad-s);
   }
   .industry-right {
     flex: 1;
@@ -839,9 +865,9 @@
     gap: var(--pad-cards-l);
   }
   .contact-title {
-    font-size: var(--h1);
+    font-size: var(--dis-2);
     font-weight: 400;
-    line-height: var(--lh-h1);
+    line-height: var(--lh-dis-2);
     color: var(--electric-blue);
     letter-spacing: 0;
   }
@@ -1145,7 +1171,7 @@
   <div class="industry-inner">
     <div class="industry-left">
       <h2 class="section-title">Industry Focus</h2>
-      <p class="industry-subtitle">Backed by nearly four decades of expertise, we engineer fit-body digital foundations.</p>
+      <p class="industry-subtitle">Backed by nearly four decades of expertise, we engineer AI-ready digital foundations.</p>
     </div>
     <div class="industry-right">
       <div>
