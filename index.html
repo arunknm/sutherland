@@ -275,9 +275,22 @@
     overflow: hidden;
     padding: 0 var(--margin);
   }
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .hero-video-mobile { display: none; }
   .hero-main {
     width: var(--content-width);
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
   }
   .hero-text-area {
     height: 600px;
@@ -1089,6 +1102,18 @@
     }
 
     /* Hero mobile */
+    .hero-video-desktop { display: none; }
+    .hero-video-mobile {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      z-index: 1;
+      pointer-events: none;
+    }
     .hero { padding: 0 var(--margin); }
     .hero-main { width: 100%; }
     .hero-text-area {
@@ -1294,6 +1319,12 @@
 
 <!-- Hero -->
 <section class="hero">
+  <video class="hero-video hero-video-desktop" autoplay muted loop playsinline>
+    <source src="desktop.webm" type="video/webm">
+  </video>
+  <video class="hero-video hero-video-mobile" autoplay muted loop playsinline>
+    <source src="mobile.webm" type="video/webm">
+  </video>
   <div class="hero-main">
     <div class="hero-text-area">
       <h1>Digital<br>Outcomes</h1>
