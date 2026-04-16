@@ -1106,9 +1106,10 @@
     .hero-video-mobile {
       display: block;
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 120%;
       height: auto;
       object-fit: cover;
       z-index: 1;
@@ -1121,9 +1122,11 @@
       padding-top: 80px;
       padding-bottom: 24px;
       gap: 16px;
+      text-align: center;
+      align-items: center;
     }
     .hero h1 { font-size: var(--dis-1); line-height: var(--lh-dis-1); }
-    .hero-subtitle { font-size: var(--p1); line-height: var(--lh-p1); }
+    .hero-subtitle { font-size: var(--p1); line-height: var(--lh-p1); text-align: center; }
     .hero-cards {
       flex-direction: row;
       overflow-x: auto;
@@ -1133,14 +1136,14 @@
       padding-bottom: 16px;
     }
     .hero-card {
-      width: 280px;
-      min-width: 280px;
+      width: 260px;
+      min-width: 260px;
       scroll-snap-align: start;
     }
-    .hero-card-content { padding: 20px; }
-    .hero-card-value { font-size: 28px; line-height: 32px; }
+    .hero-card-content { padding: 16px; }
+    .hero-card-value { font-size: 24px; line-height: 28px; }
     .hero-card-label { font-size: 12px; line-height: 16px; }
-    .hero-card-image { height: 140px; }
+    .hero-card-image { height: 0; display: none; }
     .cta-dot { width: 8px; height: 8px; }
 
     /* About mobile */
