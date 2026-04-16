@@ -1106,18 +1106,19 @@
     .hero-video-mobile {
       display: block;
       position: absolute;
-      top: 50%;
+      top: 28%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      width: 120%;
+      transform: translateX(-50%);
+      width: 80%;
       height: auto;
-      object-fit: cover;
+      object-fit: contain;
       z-index: 1;
       pointer-events: none;
     }
     .hero {
       padding: 0 var(--margin);
-      height: 80vh;
+      height: 100vh;
+      min-height: 680px;
       display: flex;
       flex-direction: column;
     }
@@ -1130,7 +1131,7 @@
     .hero-text-area {
       height: auto;
       padding-top: 70px;
-      padding-bottom: 16px;
+      padding-bottom: 0;
       gap: 12px;
       text-align: center;
       align-items: center;
@@ -1146,6 +1147,8 @@
       gap: 12px;
       margin-top: auto;
       padding-bottom: 24px;
+      position: relative;
+      z-index: 3;
     }
     .hero-card {
       width: 260px;
